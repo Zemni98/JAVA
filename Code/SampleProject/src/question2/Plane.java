@@ -1,23 +1,21 @@
-package planetest;
+package question2;
 
 public abstract class Plane {
 	private String planeName;
 	private int fuelSize;
 
 	public Plane() {
-
 	}
 
-	public Plane(String planceName, int fuelSize) {
-		this.planeName = planceName;
+	public Plane(String planeName, int fuelSize) {
+		this.planeName = planeName;
 		this.fuelSize = fuelSize;
 	}
 
 	public void refuel(int fuel) {
 		fuelSize += fuel;
-		// this.setFuelSize(this.getFuelSize() + fuel);
 	}
-
+	
 	public abstract void flight(int distance);
 
 	public String getPlaneName() {
@@ -41,4 +39,5 @@ public abstract class Plane {
 		return "\t" + planeName + "\t" + fuelSize;
 	}
 
+	
 }
