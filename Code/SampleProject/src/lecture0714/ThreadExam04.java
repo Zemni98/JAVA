@@ -17,7 +17,7 @@ class ThreadEx_04 extends Thread {
 	@Override
 	public void run() {
 
-		for (long k = 0; k < 2500000000L; k++)
+		for (long k = 0; k < 250000000000L; k++)
 			;
 	}
 
@@ -25,8 +25,10 @@ class ThreadEx_04 extends Thread {
 
 public class ThreadExam04 {
 	public static void main(String[] args) {
+		System.out.println("000000");
 		Thread t = new ThreadEx_04();
-		t.run();
+		t.start();
+		System.out.println("0000000000");
 		String input = JOptionPane.showInputDialog("값을 입력하세요!"); // blocking method 이므로 수행자체가 값을 입력하고 OK 누르기전까지 멈춰있는다.
 		System.out.println("입력값은 :" + input);
 
